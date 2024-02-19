@@ -3,10 +3,12 @@
 Attention! Please rename it and add your own useful keywords and documentation.
 """
 
-from robot.api import logger
+import logging
 
 # Variables can be accessed from the resources/variables.py Python module here as well.
 from variables import TODAY
+
+LOGGER = logging.getLogger(__name__)
 
 
 class DummyLibrary:
@@ -19,11 +21,11 @@ class DummyLibrary:
 
     def log_today_in_python(self) -> None:
         """Displays today's date in Python."""
-        logger.info(f"Today is {TODAY}. (from Python)")
+        LOGGER.info(f"Today is {TODAY}. (from Python)")
         self._context = "under logging keyword"
 
     def my_library_keyword(self, var: str = "test") -> str:
         """Describe what this RF exposed keyword does."""
-        logger.info("Python code (as RF keyword) executed with value: %s", var)
+        LOGGER.info("Python code (as RF keyword) executed with value: %s", var)
         self._context = "under my keyword"
         return var

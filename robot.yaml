@@ -3,18 +3,10 @@
 
 tasks:
   # Task names here are used when executing the bots, so renaming these is recommended.
-  Produce Output:
-    robotTaskName: Produce Output
-  Produce Output With Trace:
-    shell: python -m robot -d output -L TRACE --report NONE --logtitle "Producer log" --task "Produce Output" producer.robot
-  Consume Input:
-    robotTaskName: Consume Input
-  Consume Input With Trace:
-    shell: python -m robot -d output -L TRACE --report NONE --logtitle "Consumer log" --task "Consume Input" consumer.robot
-  Report Result:
-    robotTaskName: Report Result
-  Report Result With Trace:
-    shell: python -m robot -d output -L TRACE --report NONE --logtitle "Reporter log" --task "Report Result" reporter.robot
+  Example Task:
+    robotTaskName: Example Task
+  Example Task With Trace:
+    shell: python -m robot -d output -L TRACE --report NONE --logtitle "Producer log" --task "Example Task" tasks.robot
 
 environmentConfigs:
   - environment_windows_amd64_freeze.yaml
