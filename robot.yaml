@@ -6,7 +6,7 @@ tasks:
   Example Task:
     robotTaskName: Example Task
   Example Task With Trace:
-    shell: python -m robot -d output -L TRACE --report NONE --logtitle "Producer log" --task "Example Task" tasks.robot
+    shell: python -m robot -d output -L TRACE --report NONE --logtitle "Example log" --task "Example Task" tasks.robot
 
 environmentConfigs:
   - environment_windows_amd64_freeze.yaml
